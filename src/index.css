@@ -91,6 +91,18 @@ All colors MUST be HSL.
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --finance-green: 145 63% 49%;
+    --finance-green-light: 145 63% 95%;
+    --finance-red: 0 84% 60%;
+    --finance-red-light: 0 84% 95%;
+    --finance-blue: 217 91% 60%;
+    --finance-blue-light: 217 91% 95%;
+    --finance-purple: 245 58% 51%;
+    --finance-purple-light: 245 58% 95%;
+    --finance-orange: 25 95% 53%;
+    --finance-orange-light: 25 95% 95%;
+    --finance-surface: 240 5% 97.6%;
   }
 }
 
