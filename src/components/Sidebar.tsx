@@ -82,7 +82,7 @@ export const Sidebar: React.FC = () => {
           </div>
         </Link>
         
-        <div className="items-center content-center flex-wrap flex w-full gap-[4px_4px] mt-1 p-2 rounded-xl">
+        <Link to="/finanzas" className={`items-center content-center flex-wrap flex w-full gap-[4px_4px] ${isFinanzas ? 'bg-[rgba(0,0,0,0.04)]' : ''} mt-1 p-2 rounded-xl hover:bg-[rgba(0,0,0,0.04)] transition-colors`}>
           <div className="justify-center items-center self-stretch flex w-4 my-auto rounded-lg">
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/6fe8c18a98e72342aebb6e34296507895d157690?placeholderIfAbsent=true"
@@ -102,7 +102,7 @@ export const Sidebar: React.FC = () => {
               <div className="text-black font-normal tracking-[0]">Finanzas</div>
             </div>
           </div>
-        </div>
+        </Link>
         
         <div className="items-center content-center flex-wrap flex w-full gap-[4px_4px] mt-1 p-2 rounded-xl">
           <div className="justify-center items-center self-stretch flex w-4 my-auto rounded-lg">
