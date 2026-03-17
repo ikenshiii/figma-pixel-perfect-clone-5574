@@ -67,7 +67,7 @@ export const Sidebar: React.FC = () => {
           <div className="font-normal tracking-[0]">Escritorios</div>
         </div>
         
-        <div className="items-center content-center flex-wrap flex w-full gap-[4px_4px] bg-[rgba(0,0,0,0.04)] mt-1 p-2 rounded-xl">
+        <Link to="/" className={`items-center content-center flex-wrap flex w-full gap-[4px_4px] ${isAgenda ? 'bg-[rgba(0,0,0,0.04)]' : ''} mt-1 p-2 rounded-xl hover:bg-[rgba(0,0,0,0.04)] transition-colors`}>
           <div className="items-center content-center flex-wrap self-stretch flex w-full gap-[8px_8px] flex-1 shrink basis-[0%] my-auto rounded-xl">
             <div className="justify-center items-center self-stretch flex w-5 my-auto rounded-lg">
               <img
@@ -80,7 +80,7 @@ export const Sidebar: React.FC = () => {
               <div className="text-black font-normal tracking-[0]">Agenda</div>
             </div>
           </div>
-        </div>
+        </Link>
         
         <div className="items-center content-center flex-wrap flex w-full gap-[4px_4px] mt-1 p-2 rounded-xl">
           <div className="justify-center items-center self-stretch flex w-4 my-auto rounded-lg">
