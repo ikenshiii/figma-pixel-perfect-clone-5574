@@ -2,6 +2,9 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 export const Sidebar: React.FC = () => {
+  const location = useLocation();
+  const isAgenda = location.pathname === '/';
+  const isFinanzas = location.pathname === '/finanzas';
   return (
     <aside className="relative gap-2 p-4 border-r-[0.5px] border-r-[rgba(0,0,0,0.10)] border-solid max-md:pb-[100px]">
       <nav className="z-0 w-full gap-1 pb-3">
