@@ -1,6 +1,10 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 export const Sidebar: React.FC = () => {
+  const location = useLocation();
+  const isAgenda = location.pathname === '/';
+  const isFinanzas = location.pathname === '/finanzas';
   return (
     <aside className="relative gap-2 p-4 border-r-[0.5px] border-r-[rgba(0,0,0,0.10)] border-solid max-md:pb-[100px]">
       <nav className="z-0 w-full gap-1 pb-3">
@@ -63,7 +67,7 @@ export const Sidebar: React.FC = () => {
           <div className="font-normal tracking-[0]">Escritorios</div>
         </div>
         
-        <div className="items-center content-center flex-wrap flex w-full gap-[4px_4px] bg-[rgba(0,0,0,0.04)] mt-1 p-2 rounded-xl">
+        <Link to="/" className={`items-center content-center flex-wrap flex w-full gap-[4px_4px] ${isAgenda ? 'bg-[rgba(0,0,0,0.04)]' : ''} mt-1 p-2 rounded-xl hover:bg-[rgba(0,0,0,0.04)] transition-colors`}>
           <div className="items-center content-center flex-wrap self-stretch flex w-full gap-[8px_8px] flex-1 shrink basis-[0%] my-auto rounded-xl">
             <div className="justify-center items-center self-stretch flex w-5 my-auto rounded-lg">
               <img
@@ -76,9 +80,9 @@ export const Sidebar: React.FC = () => {
               <div className="text-black font-normal tracking-[0]">Agenda</div>
             </div>
           </div>
-        </div>
+        </Link>
         
-        <div className="items-center content-center flex-wrap flex w-full gap-[4px_4px] mt-1 p-2 rounded-xl">
+        <Link to="/finanzas" className={`items-center content-center flex-wrap flex w-full gap-[4px_4px] ${isFinanzas ? 'bg-[rgba(0,0,0,0.04)]' : ''} mt-1 p-2 rounded-xl hover:bg-[rgba(0,0,0,0.04)] transition-colors`}>
           <div className="justify-center items-center self-stretch flex w-4 my-auto rounded-lg">
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/6fe8c18a98e72342aebb6e34296507895d157690?placeholderIfAbsent=true"
@@ -98,7 +102,7 @@ export const Sidebar: React.FC = () => {
               <div className="text-black font-normal tracking-[0]">Finanzas</div>
             </div>
           </div>
-        </div>
+        </Link>
         
         <div className="items-center content-center flex-wrap flex w-full gap-[4px_4px] mt-1 p-2 rounded-xl">
           <div className="justify-center items-center self-stretch flex w-4 my-auto rounded-lg">
